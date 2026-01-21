@@ -1,0 +1,174 @@
+/* Google Fonts Import - Must be first */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* JSM Brand Colours - Maroon & Gold */
+  --color-maroon-50: #fdf2f4;
+  --color-maroon-100: #fce7eb;
+  --color-maroon-200: #f9d0d9;
+  --color-maroon-300: #f4a9ba;
+  --color-maroon-400: #ec7894;
+  --color-maroon-500: #df4a6f;
+  --color-maroon-600: #cb2c54;
+  --color-maroon-700: #ab1f43;
+  --color-maroon-800: #8f1d3c;
+  --color-maroon-900: #6b1d35;
+  --color-maroon-950: #460a1c;
+
+  --color-gold-50: #fefdf8;
+  --color-gold-100: #fdf9e7;
+  --color-gold-200: #fbf0c4;
+  --color-gold-300: #f7e38f;
+  --color-gold-400: #f2d054;
+  --color-gold-500: #d4a537;
+  --color-gold-600: #b8872a;
+  --color-gold-700: #966624;
+  --color-gold-800: #7b5223;
+  --color-gold-900: #674422;
+  --color-gold-950: #3c2310;
+
+  /* Typography - Swiss Style */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-heading: "DM Sans", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  /* Spacing Scale */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-30: 7.5rem;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection Colors */
+::selection {
+  background-color: var(--color-gold-400);
+  color: var(--color-maroon-950);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-maroon-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-maroon-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-maroon-800);
+}
+
+/* Animated Gradient Background */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Card Hover Effect */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(107, 29, 53, 0.25);
+}
+
+/* Swiss Grid Line */
+.swiss-line {
+  position: relative;
+}
+
+.swiss-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 4rem;
+  height: 4px;
+  background: var(--color-gold-500);
+}
+
+/* Number Counter Animation */
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.count-animate {
+  animation: count-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Stagger Animation Classes */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Modal Backdrop */
+.modal-backdrop {
+  background: rgba(70, 10, 28, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+/* Focus States for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
