@@ -135,7 +135,7 @@ export default function NotFound() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-maroon-100 text-maroon-700 px-4 py-2 rounded-full mb-8"
+              className="inline-flex items-center gap-2 bg-maroon-100 text-maroon-700 px-4 py-2 mb-8"
             >
               <FileText className="w-4 h-4" />
               <span className="text-sm font-semibold">Error 404</span>
@@ -171,14 +171,14 @@ export default function NotFound() {
             >
               <Link
                 to="/"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-maroon-700 text-white rounded-xl font-semibold hover:bg-maroon-800 transition-all hover:-translate-y-1 shadow-lg shadow-maroon-700/20"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-maroon-700 text-white  font-semibold hover:bg-maroon-800 transition-all hover:-translate-y-1 shadow-lg shadow-maroon-700/20"
               >
                 <Home className="w-5 h-5" />
                 Back to Homepage
               </Link>
               <button
                 onClick={() => window.history.back()}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-maroon-700 rounded-xl font-semibold hover:bg-maroon-50 transition-all border-2 border-maroon-200 hover:border-maroon-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-maroon-700  font-semibold hover:bg-maroon-50 transition-all border-2 border-maroon-200 hover:border-maroon-300"
               >
                 <ArrowLeft className="w-5 h-5" />
                 Go Back
@@ -204,9 +204,9 @@ export default function NotFound() {
                   >
                     <Link
                       to={link.href}
-                      className="group block p-6 bg-white rounded-2xl border border-maroon-100 hover:border-gold-300 hover:shadow-lg transition-all text-center"
+                      className="group block p-6 bg-white  border border-maroon-100 hover:border-gold-300 hover:shadow-lg transition-all text-center"
                     >
-                      <div className="w-12 h-12 rounded-xl bg-maroon-50 group-hover:bg-gold-100 flex items-center justify-center mx-auto mb-4 transition-colors">
+                      <div className="w-12 h-12  bg-maroon-50 group-hover:bg-gold-100 flex items-center justify-center mx-auto mb-4 transition-colors">
                         <link.icon className="w-6 h-6 text-maroon-600 group-hover:text-gold-600 transition-colors" />
                       </div>
                       <h3 className="font-semibold text-maroon-900 mb-1 group-hover:text-gold-600 transition-colors">

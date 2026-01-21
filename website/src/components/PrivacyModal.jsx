@@ -43,7 +43,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-3xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+            className="relative w-full max-w-3xl max-h-[90vh] bg-white shadow-2xl overflow-hidden"
           >
             {/* Header */}
             <div className="sticky top-0 bg-gradient-to-r from-maroon-900 to-maroon-800 px-6 py-5 flex items-center justify-between z-10">
@@ -55,7 +55,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
               </div>
               <button
                 onClick={onClose}
-                className="p-2 text-maroon-200 hover:text-white hover:bg-maroon-700 rounded-lg transition-colors"
+                className="p-2 text-maroon-200 hover:text-white hover:bg-maroon-700 transition-colors"
                 aria-label="Close modal"
               >
                 <X className="w-6 h-6" />
@@ -71,7 +71,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
 
                 <section className="mb-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-maroon-100 flex items-center justify-center">
+                    <div className="w-8 h-8 bg-maroon-100 flex items-center justify-center">
                       <FileText className="w-4 h-4 text-maroon-700" />
                     </div>
                     <h3 className="font-heading font-semibold text-maroon-900 text-lg m-0">Introduction</h3>
@@ -85,7 +85,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
 
                 <section className="mb-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-maroon-100 flex items-center justify-center">
+                    <div className="w-8 h-8 bg-maroon-100 flex items-center justify-center">
                       <Eye className="w-4 h-4 text-maroon-700" />
                     </div>
                     <h3 className="font-heading font-semibold text-maroon-900 text-lg m-0">Information We Collect</h3>
@@ -93,7 +93,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
                   <p className="text-maroon-700 leading-relaxed mb-4">
                     We may collect information about you in a variety of ways:
                   </p>
-                  <div className="bg-maroon-50 rounded-xl p-5 space-y-3">
+                  <div className="bg-maroon-50 p-5 space-y-3">
                     <div>
                       <h4 className="font-semibold text-maroon-900 text-sm">Personal Data</h4>
                       <p className="text-maroon-600 text-sm">
@@ -120,7 +120,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
 
                 <section className="mb-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-maroon-100 flex items-center justify-center">
+                    <div className="w-8 h-8 bg-maroon-100 flex items-center justify-center">
                       <Lock className="w-4 h-4 text-maroon-700" />
                     </div>
                     <h3 className="font-heading font-semibold text-maroon-900 text-lg m-0">How We Use Your Information</h3>
@@ -168,7 +168,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
                   </p>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {['Access your data', 'Correct inaccurate data', 'Request deletion', 'Restrict processing', 'Data portability', 'Withdraw consent'].map((right) => (
-                      <div key={right} className="flex items-center gap-2 bg-maroon-50 px-4 py-3 rounded-lg">
+                      <div key={right} className="flex items-center gap-2 bg-maroon-50 px-4 py-3">
                         <span className="w-2 h-2 bg-gold-500 rounded-full" />
                         <span className="text-maroon-700 text-sm">{right}</span>
                       </div>
@@ -181,7 +181,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
                   <p className="text-maroon-700 leading-relaxed">
                     If you have questions about this Privacy Policy or our data practices, please contact us at:
                   </p>
-                  <div className="bg-gold-50 border border-gold-200 rounded-xl p-5 mt-4">
+                  <div className="bg-gold-50 border border-gold-200 p-5 mt-4">
                     <p className="text-maroon-900 font-medium">JSM Consulting</p>
                     <p className="text-maroon-600 text-sm">Mudiwa House, 48 Midlothian Avenue, Eastlea, Harare</p>
                     <p className="text-maroon-600 text-sm">Email: office@jsmconsulting.co.zw</p>
@@ -196,7 +196,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
               <div className="flex justify-end">
                 <button
                   onClick={onClose}
-                  className="px-6 py-3 bg-maroon-900 text-white font-medium rounded-lg hover:bg-maroon-800 transition-colors"
+                  className="px-6 py-3 bg-maroon-900 text-white font-medium hover:bg-maroon-800 transition-colors"
                 >
                   I Understand
                 </button>

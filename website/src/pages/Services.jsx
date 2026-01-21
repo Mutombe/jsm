@@ -152,7 +152,7 @@ const HeroSection = () => {
           >
             <motion.span 
               variants={fadeInUp}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 rounded-full text-gold-700 text-sm font-medium"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 text-gold-700 text-sm font-medium"
             >
               <Briefcase className="w-4 h-4" />
               What We Offer
@@ -190,14 +190,14 @@ const HeroSection = () => {
             >
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-maroon-900 text-white font-semibold rounded hover:bg-maroon-800 transition-all"
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-maroon-900 text-white font-semibold hover:bg-maroon-800 transition-all"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href="#services"
-                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-maroon-200 text-maroon-700 font-semibold rounded hover:bg-maroon-50 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-maroon-200 text-maroon-700 font-semibold hover:bg-maroon-50 transition-all"
               >
                 Explore Services
               </a>
@@ -231,7 +231,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="absolute -left-8 top-1/4 bg-white rounded-xl p-4 shadow-xl border border-maroon-100"
+                className="absolute -left-8 top-1/4 bg-white p-4 shadow-xl border border-maroon-100"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center">
@@ -248,7 +248,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="absolute -right-4 bottom-1/4 bg-white rounded-xl p-4 shadow-xl border border-maroon-100"
+                className="absolute -right-4 bottom-1/4 bg-white p-4 shadow-xl border border-maroon-100"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
@@ -332,7 +332,7 @@ const MainServicesSection = () => {
             >
               <Link
                 to={`/services/${service.slug}`}
-                className="group relative block h-full rounded-2xl overflow-hidden"
+                className="group relative block h-full overflow-hidden"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
@@ -346,7 +346,7 @@ const MainServicesSection = () => {
 
                 {/* Content */}
                 <div className="relative p-8 min-h-[400px] flex flex-col">
-                  <div className="w-16 h-16 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-all duration-300 border border-gold-500/20 group-hover:border-transparent">
+                  <div className="w-16 h-16 bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-all duration-300 border border-gold-500/20 group-hover:border-transparent">
                     {service.icon}
                   </div>
 
@@ -440,9 +440,9 @@ const AdditionalServicesSection = () => {
                   key={index}
                   variants={fadeInUp}
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="flex items-center gap-3 p-4 bg-maroon-50 rounded-xl hover:bg-maroon-100 hover:shadow-lg transition-all group cursor-pointer"
+                  className="flex items-center gap-3 p-4 bg-maroon-50 hover:bg-maroon-100 hover:shadow-lg transition-all group cursor-pointer"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-gold-600 group-hover:bg-gold-500 group-hover:text-white transition-colors shadow-sm">
+                  <div className="w-10 h-10 bg-white flex items-center justify-center text-gold-600 group-hover:bg-gold-500 group-hover:text-white transition-colors shadow-sm">
                     {service.icon}
                   </div>
                   <span className="font-medium text-maroon-800 text-sm">{service.name}</span>
@@ -489,7 +489,7 @@ const AssociateServicesSection = () => {
 
           <motion.div 
             variants={fadeInUp}
-            className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-maroon-100"
+            className="bg-white p-8 md:p-12 shadow-xl border border-maroon-100"
           >
             <p className="text-maroon-700 leading-relaxed mb-8">
               In conjunction with our network of trusted associates, we also offer specialised 
@@ -499,9 +499,9 @@ const AssociateServicesSection = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <motion.div 
                 whileHover={{ y: -5 }}
-                className="flex items-start gap-4 p-6 bg-maroon-50 rounded-xl hover:shadow-lg transition-all"
+                className="flex items-start gap-4 p-6 bg-maroon-50 hover:shadow-lg transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-maroon-900 text-gold-400 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-maroon-900 text-gold-400 flex items-center justify-center flex-shrink-0">
                   <Calculator className="w-6 h-6" />
                 </div>
                 <div className="text-left">
@@ -517,9 +517,9 @@ const AssociateServicesSection = () => {
 
               <motion.div 
                 whileHover={{ y: -5 }}
-                className="flex items-start gap-4 p-6 bg-maroon-50 rounded-xl hover:shadow-lg transition-all"
+                className="flex items-start gap-4 p-6 bg-maroon-50 hover:shadow-lg transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-maroon-900 text-gold-400 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-maroon-900 text-gold-400 flex items-center justify-center flex-shrink-0">
                   <Users className="w-6 h-6" />
                 </div>
                 <div className="text-left">
@@ -600,14 +600,14 @@ const CTASection = () => {
           >
             <Link
               to="/contact"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold rounded hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40"
             >
               Get in Touch
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href="tel:+263712407700"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded hover:bg-white/20 transition-all backdrop-blur-sm"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 transition-all backdrop-blur-sm"
             >
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               Call Us Now

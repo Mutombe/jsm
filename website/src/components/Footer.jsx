@@ -60,14 +60,14 @@ const Footer = ({ onPrivacyClick, onCookiesClick }) => {
             <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold rounded hover:bg-gold-400 transition-all group"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold hover:bg-gold-400 transition-all group"
               >
                 Schedule a Consultation
                 <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </Link>
               <a
                 href="tel:+263712407700"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-maroon-700 text-white font-semibold rounded hover:bg-maroon-900 hover:border-maroon-600 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-maroon-700 text-white font-semibold hover:bg-maroon-900 hover:border-maroon-600 transition-all"
               >
                 <Phone className="w-5 h-5" />
                 Call Us Now

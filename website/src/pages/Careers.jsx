@@ -84,7 +84,7 @@ const HeroSection = () => {
           className="max-w-3xl"
         >
           <motion.div variants={fadeInUp} className="mb-4 sm:mb-6">
-            <span className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gold-500/20 border border-gold-500/40 rounded-full text-gold-300 text-xs sm:text-sm font-semibold">
+            <span className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gold-500/20 border border-gold-500/40 text-gold-300 text-xs sm:text-sm font-semibold">
               <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               Join Our Growing Team
             </span>
@@ -110,14 +110,14 @@ const HeroSection = () => {
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               href="#openings"
-              className="group inline-flex items-center justify-center gap-2 bg-gold-500 text-maroon-950 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-semibold hover:bg-gold-400 transition-all duration-300 text-sm sm:text-base"
+              className="group inline-flex items-center justify-center gap-2 bg-gold-500 text-maroon-950 px-6 sm:px-8 py-3.5 sm:py-4  font-semibold hover:bg-gold-400 transition-all duration-300 text-sm sm:text-base"
             >
               View Open Positions
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#culture"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 text-sm sm:text-base"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 sm:px-8 py-3.5 sm:py-4  font-semibold hover:bg-white/10 transition-all duration-300 text-sm sm:text-base"
             >
               Our Culture
             </a>
@@ -137,7 +137,7 @@ const HeroSection = () => {
           ].map((stat, i) => (
             <div 
               key={i}
-              className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-xl text-center min-w-[120px] sm:min-w-[140px]"
+              className="bg-white  sm: p-4 sm:p-6 shadow-xl text-center min-w-[120px] sm:min-w-[140px]"
             >
               <div className="text-2xl sm:text-3xl font-display font-bold text-maroon-900">{stat.number}</div>
               <div className="text-maroon-600 text-xs sm:text-sm">{stat.label}</div>
@@ -228,10 +228,10 @@ const WhyJoinSection = () => {
                 key={index}
                 variants={scaleIn}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className={`relative bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-transparent hover:border-${benefit.color === 'gold' ? 'gold' : 'maroon'}-200 overflow-hidden`}
+                className={`relative bg-white  sm: p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-transparent hover:border-${benefit.color === 'gold' ? 'gold' : 'maroon'}-200 overflow-hidden`}
               >
                 {/* Icon */}
-                <div className={`w-12 sm:w-14 h-12 sm:h-14 ${benefit.color === 'gold' ? 'bg-gold-100' : 'bg-maroon-100'} rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-5`}>
+                <div className={`w-12 sm:w-14 h-12 sm:h-14 ${benefit.color === 'gold' ? 'bg-gold-100' : 'bg-maroon-100'}  sm: flex items-center justify-center mb-4 sm:mb-5`}>
                   <benefit.icon className={`w-6 sm:w-7 h-6 sm:h-7 ${benefit.color === 'gold' ? 'text-gold-600' : 'text-maroon-700'}`} />
                 </div>
 
@@ -365,7 +365,7 @@ const OpenPositionsSection = () => {
             <motion.div
               key={job.id}
               variants={fadeInUp}
-              className="bg-gradient-to-r from-maroon-50/50 to-white rounded-xl sm:rounded-2xl border border-maroon-100 overflow-hidden"
+              className="bg-gradient-to-r from-maroon-50/50 to-white  sm: border border-maroon-100 overflow-hidden"
             >
               {/* Job Header */}
               <button
@@ -375,7 +375,7 @@ const OpenPositionsSection = () => {
                 <div className="flex-1">
                   <div className="flex flex-wrap items-start sm:items-center gap-2 sm:gap-3 mb-2">
                     <h3 className="font-display text-xl sm:text-2xl text-maroon-950">{job.title}</h3>
-                    <span className="px-2.5 sm:px-3 py-1 bg-gold-100 text-gold-700 rounded-full text-xs sm:text-sm font-medium">
+                    <span className="px-2.5 sm:px-3 py-1 bg-gold-100 text-gold-700 text-xs sm:text-sm font-medium">
                       {job.department}
                     </span>
                   </div>
@@ -449,7 +449,7 @@ const OpenPositionsSection = () => {
 
                           <a
                             href="#apply"
-                            className="inline-flex items-center justify-center gap-2 bg-maroon-900 text-white px-5 sm:px-6 py-3 rounded-xl font-semibold hover:bg-maroon-800 transition-colors text-sm sm:text-base w-full sm:w-auto"
+                            className="inline-flex items-center justify-center gap-2 bg-maroon-900 text-white px-5 sm:px-6 py-3  font-semibold hover:bg-maroon-800 transition-colors text-sm sm:text-base w-full sm:w-auto"
                           >
                             Apply for This Position
                             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -559,7 +559,7 @@ const ApplicationSection = () => {
 
             <motion.div variants={fadeInUp} className="space-y-5 sm:space-y-6">
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gold-500/20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gold-500/20  sm: flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-gold-400" />
                 </div>
                 <div>
@@ -571,7 +571,7 @@ const ApplicationSection = () => {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gold-500/20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gold-500/20  sm: flex items-center justify-center flex-shrink-0">
                   <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-gold-400" />
                 </div>
                 <div>
@@ -588,7 +588,7 @@ const ApplicationSection = () => {
             {/* Career Path */}
             <motion.div 
               variants={fadeInUp}
-              className="mt-8 sm:mt-12 p-4 sm:p-6 bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-white/10"
+              className="mt-8 sm:mt-12 p-4 sm:p-6 bg-white/5 backdrop-blur-sm  sm: border border-white/10"
             >
               <h4 className="text-white font-semibold mb-3 sm:mb-4 flex items-center gap-2 text-sm sm:text-base">
                 <Target className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400" />
@@ -597,7 +597,7 @@ const ApplicationSection = () => {
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
                 {['Graduate', 'Associate', 'Senior', 'Manager', 'Partner'].map((level, i) => (
                   <React.Fragment key={level}>
-                    <span className="text-maroon-200 py-1 px-2 bg-white/5 rounded">{level}</span>
+                    <span className="text-maroon-200 py-1 px-2 bg-white/5">{level}</span>
                     {i < 4 && <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-gold-500 flex-shrink-0" />}
                   </React.Fragment>
                 ))}
@@ -612,7 +612,7 @@ const ApplicationSection = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="order-1 lg:order-2"
           >
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl">
+            <form onSubmit={handleSubmit} className="bg-white  sm: p-6 sm:p-8 md:p-10 shadow-2xl">
               <h3 className="font-display text-xl sm:text-2xl text-maroon-950 mb-5 sm:mb-6">Application Form</h3>
               
               <div className="space-y-4 sm:space-y-5">
@@ -628,7 +628,7 @@ const ApplicationSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3 rounded-lg sm:rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all text-sm sm:text-base"
+                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3  sm: border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all text-sm sm:text-base"
                     placeholder="Your full name"
                   />
                 </div>
@@ -645,7 +645,7 @@ const ApplicationSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3 rounded-lg sm:rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all text-sm sm:text-base"
+                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3  sm: border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all text-sm sm:text-base"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -662,7 +662,7 @@ const ApplicationSection = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3 rounded-lg sm:rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all text-sm sm:text-base"
+                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3  sm: border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all text-sm sm:text-base"
                     placeholder="+263 7XX XXX XXX"
                   />
                 </div>
@@ -678,7 +678,7 @@ const ApplicationSection = () => {
                     value={formData.position}
                     onChange={handleChange}
                     required
-                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3 rounded-lg sm:rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all bg-white text-sm sm:text-base"
+                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3  sm: border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all bg-white text-sm sm:text-base"
                   >
                     <option value="">Select a position</option>
                     <option value="audit-associate">Audit Associate</option>
@@ -699,7 +699,7 @@ const ApplicationSection = () => {
                     value={formData.experience}
                     onChange={handleChange}
                     required
-                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3 rounded-lg sm:rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all bg-white text-sm sm:text-base"
+                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3  sm: border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all bg-white text-sm sm:text-base"
                   >
                     <option value="">Select experience level</option>
                     <option value="0-1">0-1 years</option>
@@ -720,13 +720,13 @@ const ApplicationSection = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3 rounded-lg sm:rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all resize-none text-sm sm:text-base"
+                    className="w-full px-3.5 sm:px-4 py-3 sm:py-3  sm: border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all resize-none text-sm sm:text-base"
                     placeholder="Tell us about yourself and why you'd like to join JSM Consulting..."
                   />
                 </div>
 
                 {/* CV Upload Note */}
-                <div className="flex items-start gap-2.5 sm:gap-3 p-3.5 sm:p-4 bg-maroon-50 rounded-lg sm:rounded-xl">
+                <div className="flex items-start gap-2.5 sm:gap-3 p-3.5 sm:p-4 bg-maroon-50  sm:">
                   <Upload className="w-4 h-4 sm:w-5 sm:h-5 text-maroon-600 mt-0.5 flex-shrink-0" />
                   <p className="text-xs sm:text-sm text-maroon-700">
                     Please email your CV and supporting documents to{' '}
@@ -741,7 +741,7 @@ const ApplicationSection = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-maroon-900 text-white py-3.5 sm:py-4 rounded-lg sm:rounded-xl font-semibold hover:bg-maroon-800 active:bg-maroon-900 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed text-sm sm:text-base"
+                  className="w-full bg-maroon-900 text-white py-3.5 sm:py-4  sm: font-semibold hover:bg-maroon-800 active:bg-maroon-900 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed text-sm sm:text-base"
                 >
                   {isSubmitting ? (
                     <>

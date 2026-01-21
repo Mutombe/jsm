@@ -109,7 +109,7 @@ const CookiesModal = ({ isOpen, onClose }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-2xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+            className="relative w-full max-w-2xl max-h-[90vh] bg-white shadow-2xl overflow-hidden"
           >
             {/* Header */}
             <div className="sticky top-0 bg-gradient-to-r from-maroon-900 to-maroon-800 px-6 py-5 flex items-center justify-between z-10">
@@ -121,7 +121,7 @@ const CookiesModal = ({ isOpen, onClose }) => {
               </div>
               <button
                 onClick={onClose}
-                className="p-2 text-maroon-200 hover:text-white hover:bg-maroon-700 rounded-lg transition-colors"
+                className="p-2 text-maroon-200 hover:text-white hover:bg-maroon-700 transition-colors"
                 aria-label="Close modal"
               >
                 <X className="w-6 h-6" />
@@ -139,7 +139,7 @@ const CookiesModal = ({ isOpen, onClose }) => {
               </div>
 
               {/* Cookie Info Banner */}
-              <div className="bg-gold-50 border border-gold-200 rounded-xl p-4 mb-6 flex items-start gap-3">
+              <div className="bg-gold-50 border border-gold-200 p-4 mb-6 flex items-start gap-3">
                 <Info className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-gold-800">
                   Your preferences will be saved and applied across all pages on our website. You can 
@@ -152,7 +152,7 @@ const CookiesModal = ({ isOpen, onClose }) => {
                 {cookieTypes.map((cookie) => (
                   <div
                     key={cookie.key}
-                    className={`p-5 rounded-xl border transition-colors ${
+                    className={`p-5 border transition-colors ${
                       preferences[cookie.key]
                         ? 'bg-maroon-50 border-maroon-200'
                         : 'bg-gray-50 border-gray-200'
@@ -164,7 +164,7 @@ const CookiesModal = ({ isOpen, onClose }) => {
                           {cookie.name}
                         </h3>
                         {cookie.required && (
-                          <span className="px-2 py-0.5 bg-maroon-900 text-white text-xs font-medium rounded">
+                          <span className="px-2 py-0.5 bg-maroon-900 text-white text-xs font-medium">
                             Required
                           </span>
                         )}
@@ -197,20 +197,20 @@ const CookiesModal = ({ isOpen, onClose }) => {
               <div className="flex flex-col sm:flex-row gap-3 sm:justify-between">
                 <button
                   onClick={onClose}
-                  className="px-6 py-3 text-maroon-700 font-medium hover:bg-maroon-100 rounded-lg transition-colors order-2 sm:order-1"
+                  className="px-6 py-3 text-maroon-700 font-medium hover:bg-maroon-100 transition-colors order-2 sm:order-1"
                 >
                   Cancel
                 </button>
                 <div className="flex gap-3 order-1 sm:order-2">
                   <button
                     onClick={savePreferences}
-                    className="flex-1 sm:flex-none px-6 py-3 border border-maroon-300 text-maroon-900 font-medium rounded-lg hover:bg-white transition-colors"
+                    className="flex-1 sm:flex-none px-6 py-3 border border-maroon-300 text-maroon-900 font-medium hover:bg-white transition-colors"
                   >
                     Save Preferences
                   </button>
                   <button
                     onClick={acceptAll}
-                    className="flex-1 sm:flex-none px-6 py-3 bg-maroon-900 text-white font-medium rounded-lg hover:bg-maroon-800 transition-colors"
+                    className="flex-1 sm:flex-none px-6 py-3 bg-maroon-900 text-white font-medium hover:bg-maroon-800 transition-colors"
                   >
                     Accept All
                   </button>

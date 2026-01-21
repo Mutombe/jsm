@@ -52,7 +52,7 @@ const HeroSection = () => {
           >
             <motion.span 
               variants={fadeInUp}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gold-100 text-gold-700 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gold-100 text-gold-700 text-sm font-medium mb-6"
             >
               <Building2 className="w-4 h-4" />
               Established 2001
@@ -105,7 +105,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="lg:pl-16 lg:py-16"
           >
-            <div className="bg-maroon-900 lg:bg-transparent rounded-2xl lg:rounded-none p-8 lg:p-0">
+            <div className="bg-maroon-900 lg:bg-transparent p-8 lg:p-0">
               <p className="text-maroon-200 lg:text-maroon-300 text-lg leading-relaxed mb-6">
                 JSM Consulting, Chartered Accountants Zimbabwe, was established on 1 July 2001. 
                 Since then, we have grown to become one of the most respected practices in the country, 
@@ -194,7 +194,7 @@ const VMVSection = () => {
               key={index}
               variants={fadeInUp}
               whileHover={{ y: -10 }}
-              className="group relative overflow-hidden rounded-2xl"
+              className="group relative overflow-hidden"
             >
               {/* Background Image */}
               <div className="absolute inset-0">
@@ -220,9 +220,9 @@ const VMVSection = () => {
                   }} />
                 </div>
 
-                <div className={`relative w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${
-                  item.color === 'gold' 
-                    ? 'bg-maroon-900 text-gold-400' 
+                <div className={`relative w-16 h-16 flex items-center justify-center mb-6 ${
+                  item.color === 'gold'
+                    ? 'bg-maroon-900 text-gold-400'
                     : 'bg-gold-500/20 text-gold-400 border border-gold-500/30'
                 }`}>
                   {item.icon}
@@ -304,7 +304,7 @@ const ValuesSection = () => {
                   key={index}
                   variants={fadeInUp}
                   whileHover={{ x: 10 }}
-                  className="group flex items-center gap-4 p-4 bg-maroon-50 rounded-xl hover:bg-maroon-100 transition-all cursor-default"
+                  className="group flex items-center gap-4 p-4 bg-maroon-50 hover:bg-maroon-100 transition-all cursor-default"
                 >
                   <div className="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <Shield className="w-5 h-5 text-maroon-900" />
@@ -333,7 +333,7 @@ const ValuesSection = () => {
             {/* Image with overlay beliefs */}
             <motion.div 
               variants={fadeInUp}
-              className="relative rounded-2xl overflow-hidden"
+              className="relative overflow-hidden"
             >
               <img 
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
@@ -359,7 +359,7 @@ const ValuesSection = () => {
                 <motion.div 
                   key={index}
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-center gap-3 p-4 bg-gold-50 rounded-xl hover:bg-gold-100 transition-all"
+                  className="flex items-center gap-3 p-4 bg-gold-50 hover:bg-gold-100 transition-all"
                 >
                   <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0" />
                   <span className="font-medium text-maroon-800">{belief}</span>
@@ -444,9 +444,9 @@ const WhyChooseSection = () => {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ x: 10 }}
-                className="group flex gap-6 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all"
+                className="group flex gap-6 p-6 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all"
               >
-                <div className="w-14 h-14 rounded-xl bg-gold-500/10 flex items-center justify-center flex-shrink-0 text-gold-400 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-all">
+                <div className="w-14 h-14 bg-gold-500/10 flex items-center justify-center flex-shrink-0 text-gold-400 group-hover:bg-gold-500 group-hover:text-maroon-900 transition-all">
                   {reason.icon}
                 </div>
                 <div>
@@ -494,7 +494,7 @@ const FeeSection = () => {
             className="grid lg:grid-cols-2 gap-8 items-center"
           >
             {/* Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative overflow-hidden shadow-xl">
               <img 
                 src="/17.jpg"
                 alt="Financial transparency"
@@ -508,7 +508,7 @@ const FeeSection = () => {
             </div>
 
             {/* Content */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl shadow-maroon-900/5 border border-maroon-100">
+            <div className="bg-white p-8 shadow-xl shadow-maroon-900/5 border border-maroon-100">
               <p className="text-lg text-maroon-700 leading-relaxed mb-6">
                 Our fees for all professional work are calculated on the basis of time spent 
                 on the engagement and the rate appropriate to the calibre of staff utilised.
@@ -530,7 +530,7 @@ const FeeSection = () => {
 
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-maroon-900 text-white font-semibold rounded hover:bg-maroon-800 transition-all w-full justify-center"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-maroon-900 text-white font-semibold hover:bg-maroon-800 transition-all w-full justify-center"
               >
                 Request a Quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -593,14 +593,14 @@ const CTASection = () => {
           >
             <Link
               to="/contact"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold rounded hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/25"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/25"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/services"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded hover:bg-white/20 transition-all backdrop-blur-sm"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 transition-all backdrop-blur-sm"
             >
               Explore Our Services
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

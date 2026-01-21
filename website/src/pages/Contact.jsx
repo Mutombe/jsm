@@ -188,10 +188,10 @@ const ContactSection = () => {
               {/* Office Address */}
               <motion.div
                 variants={scaleIn}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-maroon-100"
+                className="bg-white  p-6 shadow-sm hover:shadow-lg transition-shadow border border-maroon-100"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-maroon-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-maroon-100  flex items-center justify-center flex-shrink-0">
                     <Building2 className="w-6 h-6 text-maroon-700" />
                   </div>
                   <div>
@@ -218,10 +218,10 @@ const ContactSection = () => {
               {/* Phone */}
               <motion.div
                 variants={scaleIn}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-maroon-100"
+                className="bg-white  p-6 shadow-sm hover:shadow-lg transition-shadow border border-maroon-100"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gold-100  flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-gold-600" />
                   </div>
                   <div>
@@ -239,10 +239,10 @@ const ContactSection = () => {
               {/* Email */}
               <motion.div
                 variants={scaleIn}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-maroon-100"
+                className="bg-white  p-6 shadow-sm hover:shadow-lg transition-shadow border border-maroon-100"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-maroon-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-maroon-100  flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-maroon-700" />
                   </div>
                   <div>
@@ -257,10 +257,10 @@ const ContactSection = () => {
               {/* Business Hours */}
               <motion.div
                 variants={scaleIn}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-maroon-100"
+                className="bg-white  p-6 shadow-sm hover:shadow-lg transition-shadow border border-maroon-100"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gold-100  flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-gold-600" />
                   </div>
                   <div>
@@ -295,7 +295,7 @@ const ContactSection = () => {
             variants={fadeInRight}
             className="lg:col-span-3"
           >
-            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-maroon-100">
+            <div className="bg-white  p-8 md:p-10 shadow-xl border border-maroon-100">
               <h3 className="font-display text-2xl text-maroon-950 mb-2">Online Enquiry</h3>
               <p className="text-maroon-600 mb-8">Fill out the form below and we'll respond within 24 hours.</p>
 
@@ -311,7 +311,7 @@ const ContactSection = () => {
                       name="title"
                       value={formData.title}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all bg-white"
+                      className="w-full px-4 py-3  border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all bg-white"
                     >
                       <option value="Mr">Mr</option>
                       <option value="Mrs">Mrs</option>
@@ -334,7 +334,7 @@ const ContactSection = () => {
                       value={formData.surname}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all"
+                      className="w-full px-4 py-3  border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all"
                       placeholder="Your surname"
                     />
                   </div>
@@ -352,7 +352,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all"
+                    className="w-full px-4 py-3  border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -369,7 +369,7 @@ const ContactSection = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all"
+                      className="w-full px-4 py-3  border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all"
                       placeholder="+263 7XX XXX XXX"
                     />
                   </div>
@@ -386,7 +386,7 @@ const ContactSection = () => {
                       value={formData.country}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all"
+                      className="w-full px-4 py-3  border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all"
                       placeholder="Zimbabwe"
                     />
                   </div>
@@ -403,7 +403,7 @@ const ContactSection = () => {
                     value={formData.service}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all bg-white"
+                    className="w-full px-4 py-3  border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all bg-white"
                   >
                     <option value="">Select a service</option>
                     {services.map(service => (
@@ -424,7 +424,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3  border border-maroon-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all resize-none"
                     placeholder="Please describe your requirements..."
                   />
                 </div>
@@ -433,7 +433,7 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-maroon-900 text-white py-4 rounded-xl font-semibold hover:bg-maroon-800 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-maroon-900 text-white py-4  font-semibold hover:bg-maroon-800 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
@@ -483,7 +483,7 @@ const MapSection = () => {
                 href="https://maps.google.com/?q=Mudiwa+House+48+Midlothian+Avenue+Eastlea+Harare"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 bg-maroon-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-maroon-800 transition-colors"
+                className="inline-flex items-center gap-2 mt-4 bg-maroon-900 text-white px-6 py-3  font-medium hover:bg-maroon-800 transition-colors"
               >
                 Open in Google Maps
                 <ExternalLink className="w-4 h-4" />
@@ -506,7 +506,7 @@ const MapSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: -60 } : {}}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="bg-maroon-950 rounded-2xl p-8 md:p-10 max-w-2xl relative z-10 shadow-2xl"
+            className="bg-maroon-950  p-8 md:p-10 max-w-2xl relative z-10 shadow-2xl"
           >
             <div className="grid sm:grid-cols-2 gap-8">
               <div>
@@ -570,10 +570,10 @@ const QuickLinksSection = () => {
             <motion.div key={index} variants={scaleIn}>
               <Link
                 to={item.link}
-                className="group block bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gold-200 h-full"
+                className="group block bg-white  p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gold-200 h-full"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-maroon-100 rounded-xl flex items-center justify-center group-hover:bg-gold-100 transition-colors">
+                  <div className="w-12 h-12 bg-maroon-100  flex items-center justify-center group-hover:bg-gold-100 transition-colors">
                     <item.icon className="w-6 h-6 text-maroon-700 group-hover:text-gold-600 transition-colors" />
                   </div>
                   <ArrowRight className="w-5 h-5 text-maroon-400 group-hover:text-gold-600 group-hover:translate-x-1 transition-all" />

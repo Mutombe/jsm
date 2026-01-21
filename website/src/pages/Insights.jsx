@@ -270,7 +270,7 @@ export default function Insights() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-sm  p-6 border border-white/20">
             <FileText className="w-8 h-8 text-gold-400 mb-3" />
             <p className="text-white font-semibold">24+ Articles</p>
             <p className="text-white/60 text-sm">Published this year</p>
@@ -283,7 +283,7 @@ export default function Insights() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.8 }}
         >
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-sm  p-6 border border-white/20">
             <Download className="w-8 h-8 text-gold-400 mb-3" />
             <p className="text-white font-semibold">Free Resources</p>
             <p className="text-white/60 text-sm">Guides & reports</p>
@@ -299,7 +299,7 @@ export default function Insights() {
               transition={{ duration: 0.8 }}
               style={{ opacity }}
             >
-              <div className="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 px-4 py-2 mb-8 backdrop-blur-sm">
                 <BookOpen className="w-4 h-4 text-gold-400" />
                 <span className="text-gold-400 text-sm font-medium tracking-wide">Knowledge Hub</span>
               </div>
@@ -330,7 +330,7 @@ export default function Insights() {
                   placeholder="Search articles..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all"
+                  className="w-full pl-12 pr-4 py-4  bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all"
                 />
               </div>
             </motion.div>
@@ -342,7 +342,7 @@ export default function Insights() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-white rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-transform duration-500 group">
+              <div className="bg-white  overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-transform duration-500 group">
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={featuredArticle.image}
@@ -350,12 +350,12 @@ export default function Insights() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-maroon-950/80 via-maroon-900/40 to-transparent" />
-                  <span className="absolute top-4 left-4 bg-gold-500 text-maroon-900 px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="absolute top-4 left-4 bg-gold-500 text-maroon-900 px-3 py-1 text-sm font-semibold">
                     Featured
                   </span>
                 </div>
                 <div className="p-8">
-                  <span className="inline-block bg-maroon-100 text-maroon-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                  <span className="inline-block bg-maroon-100 text-maroon-700 px-3 py-1 text-sm font-medium mb-4">
                     {featuredArticle.category}
                   </span>
                   <h3 className="font-display text-2xl text-maroon-900 mb-3 leading-tight group-hover:text-gold-600 transition-colors">
@@ -414,7 +414,7 @@ export default function Insights() {
               <button
                 key={category.name}
                 onClick={() => setActiveCategory(category.name)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                className={`flex items-center gap-2 px-4 py-2 text-sm font-medium whitespace-nowrap transition-all ${
                   activeCategory === category.name
                     ? 'bg-maroon-700 text-white shadow-lg'
                     : 'bg-maroon-50 text-maroon-600 hover:bg-maroon-100'
@@ -459,7 +459,7 @@ export default function Insights() {
                       key={article.id}
                       variants={fadeInUp}
                       whileHover={{ y: -5 }}
-                      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-maroon-100"
+                      className="group bg-white  overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-maroon-100"
                     >
                       <div className="grid md:grid-cols-5 gap-0">
                         <div className="md:col-span-2 relative h-48 md:h-full overflow-hidden">
@@ -471,7 +471,7 @@ export default function Insights() {
                           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20" />
                           <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
                             {article.tags.slice(0, 2).map((tag) => (
-                              <span key={tag} className="bg-white/20 backdrop-blur-sm text-white px-2 py-1 rounded text-xs">
+                              <span key={tag} className="bg-white/20 backdrop-blur-sm text-white px-2 py-1 text-xs">
                                 {tag}
                               </span>
                             ))}
@@ -479,7 +479,7 @@ export default function Insights() {
                         </div>
                         <div className="md:col-span-3 p-6 md:p-8">
                           <div className="flex items-center gap-3 mb-4">
-                            <span className="bg-gold-100 text-gold-700 px-3 py-1 rounded-full text-xs font-semibold">
+                            <span className="bg-gold-100 text-gold-700 px-3 py-1 text-xs font-semibold">
                               {article.category}
                             </span>
                             <span className="text-maroon-400 text-sm flex items-center gap-1">
@@ -524,7 +524,7 @@ export default function Insights() {
 
                 {/* Load More */}
                 <motion.div variants={fadeInUp} className="text-center mt-12">
-                  <button className="inline-flex items-center gap-2 px-8 py-4 bg-maroon-700 text-white rounded-xl font-semibold hover:bg-maroon-800 transition-all hover:shadow-lg">
+                  <button className="inline-flex items-center gap-2 px-8 py-4 bg-maroon-700 text-white  font-semibold hover:bg-maroon-800 transition-all hover:shadow-lg">
                     Load More Articles
                     <ChevronRight className="w-4 h-4" />
                   </button>
@@ -536,7 +536,7 @@ export default function Insights() {
                 {/* Newsletter Signup */}
                 <motion.div
                   variants={fadeInUp}
-                  className="relative rounded-2xl overflow-hidden"
+                  className="relative  overflow-hidden"
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0">
@@ -557,9 +557,9 @@ export default function Insights() {
                     <input
                       type="email"
                       placeholder="Your email address"
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 mb-3 focus:outline-none focus:ring-2 focus:ring-gold-400"
+                      className="w-full px-4 py-3  bg-white/10 border border-white/20 text-white placeholder:text-white/50 mb-3 focus:outline-none focus:ring-2 focus:ring-gold-400"
                     />
-                    <button className="w-full py-3 bg-gold-500 text-maroon-900 rounded-lg font-semibold hover:bg-gold-400 transition-colors">
+                    <button className="w-full py-3 bg-gold-500 text-maroon-900  font-semibold hover:bg-gold-400 transition-colors">
                       Subscribe
                     </button>
                   </div>
@@ -568,7 +568,7 @@ export default function Insights() {
                 {/* Downloadable Reports */}
                 <motion.div
                   variants={fadeInUp}
-                  className="bg-white rounded-2xl p-8 border border-maroon-100 shadow-sm"
+                  className="bg-white  p-8 border border-maroon-100 shadow-sm"
                 >
                   <h3 className="font-display text-xl text-maroon-900 mb-6 flex items-center gap-2">
                     <FileText className="w-5 h-5 text-gold-500" />
@@ -579,7 +579,7 @@ export default function Insights() {
                       <motion.div
                         key={index}
                         whileHover={{ x: 5 }}
-                        className="group p-4 rounded-xl bg-maroon-50 hover:bg-maroon-100 transition-all cursor-pointer"
+                        className="group p-4  bg-maroon-50 hover:bg-maroon-100 transition-all cursor-pointer"
                       >
                         <h4 className="font-semibold text-maroon-900 mb-1 group-hover:text-gold-600 transition-colors">
                           {report.title}
@@ -600,7 +600,7 @@ export default function Insights() {
                 {/* Trending Topics */}
                 <motion.div
                   variants={fadeInUp}
-                  className="bg-white rounded-2xl p-8 border border-maroon-100 shadow-sm"
+                  className="bg-white  p-8 border border-maroon-100 shadow-sm"
                 >
                   <h3 className="font-display text-xl text-maroon-900 mb-6 flex items-center gap-2">
                     <TrendingUp className="w-5 h-5 text-gold-500" />
@@ -611,7 +611,7 @@ export default function Insights() {
                       <motion.span
                         key={topic}
                         whileHover={{ scale: 1.05 }}
-                        className="px-3 py-2 bg-maroon-50 text-maroon-600 rounded-lg text-sm hover:bg-maroon-100 cursor-pointer transition-colors"
+                        className="px-3 py-2 bg-maroon-50 text-maroon-600  text-sm hover:bg-maroon-100 cursor-pointer transition-colors"
                       >
                         {topic}
                       </motion.span>
@@ -672,7 +672,7 @@ export default function Insights() {
                   key={index}
                   variants={fadeInUp}
                   whileHover={{ y: -10 }}
-                  className="group bg-white/5 backdrop-blur-sm rounded-2xl p-10 border border-white/10 hover:bg-white/10 hover:border-gold-500/30 transition-all"
+                  className="group bg-white/5 backdrop-blur-sm  p-10 border border-white/10 hover:bg-white/10 hover:border-gold-500/30 transition-all"
                 >
                   <Quote className="w-12 h-12 text-gold-400 mb-6" />
                   <p className="text-xl text-white leading-relaxed mb-8">
@@ -734,7 +734,7 @@ export default function Insights() {
                 </div>
                 <Link
                   to="/contact"
-                  className="group inline-flex items-center gap-2 px-6 py-3 bg-maroon-700 text-white rounded-xl font-semibold hover:bg-maroon-800 transition-all"
+                  className="group inline-flex items-center gap-2 px-6 py-3 bg-maroon-700 text-white  font-semibold hover:bg-maroon-800 transition-all"
                 >
                   Access Video Library
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -742,7 +742,7 @@ export default function Insights() {
               </motion.div>
 
               <motion.div variants={fadeInRight} className="relative">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+                <div className="relative  overflow-hidden shadow-2xl group">
                   <img 
                     src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
                     alt="Webinar preview"
@@ -816,14 +816,14 @@ export default function Insights() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-maroon-800 text-white rounded font-semibold hover:bg-maroon-900 transition-all shadow-lg"
+                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-maroon-800 text-white font-semibold hover:bg-maroon-900 transition-all shadow-lg"
                 >
                   Schedule a Consultation
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-maroon-800 rounded font-semibold hover:bg-maroon-50 transition-all shadow-lg"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-maroon-800 font-semibold hover:bg-maroon-50 transition-all shadow-lg"
                 >
                   Explore Our Services
                 </Link>

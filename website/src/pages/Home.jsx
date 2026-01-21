@@ -448,7 +448,7 @@ const ServicesSection = () => {
             <motion.div key={index} variants={fadeInUp}>
               <Link
                 to={service.link}
-                className="group relative block h-full rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-maroon-900/10 transition-all duration-500"
+                className="group relative block h-full overflow-hidden hover:shadow-2xl hover:shadow-maroon-900/10 transition-all duration-500"
               >
                 {/* Background Image - Visible by Default */}
                 <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
@@ -461,10 +461,10 @@ const ServicesSection = () => {
                 </div>
 
                 {/* White Background - Reveals on Hover */}
-                <div className="absolute inset-0 bg-white border border-maroon-100 rounded-2xl opacity-0 group-hover:opacity-100 group-hover:border-gold-300 transition-all duration-500" />
+                <div className="absolute inset-0 bg-white border border-maroon-100 opacity-0 group-hover:opacity-100 group-hover:border-gold-300 transition-all duration-500" />
 
                 <div className="relative p-8">
-                  <div className="w-14 h-14 rounded-xl bg-gold-500 text-maroon-900 flex items-center justify-center mb-6 group-hover:bg-maroon-900 group-hover:text-gold-400 transition-all duration-300 group-hover:scale-110">
+                  <div className="w-14 h-14 bg-gold-500 text-maroon-900 flex items-center justify-center mb-6 group-hover:bg-maroon-900 group-hover:text-gold-400 transition-all duration-300 group-hover:scale-110">
                     {service.icon}
                   </div>
                   <h3 className="font-heading font-semibold text-xl text-white mb-3 group-hover:text-maroon-900 transition-colors duration-300">
@@ -491,7 +491,7 @@ const ServicesSection = () => {
         >
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-maroon-900 text-white font-semibold rounded hover:bg-maroon-800 transition-all hover:shadow-xl hover:scale-[1.02]"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-maroon-900 text-white font-semibold hover:bg-maroon-800 transition-all hover:shadow-xl hover:scale-[1.02]"
           >
             View All Services
             <ArrowRight className="w-5 h-5" />
@@ -542,7 +542,7 @@ const AboutSection = () => {
             transition={{ delay: 0.6, type: 'spring' }}
             className="absolute bottom-8 left-8 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:right-0 lg:left-auto lg:translate-x-1/2 z-10"
           >
-            <div className="w-32 h-32 bg-gold-500 rounded-2xl flex items-center justify-center shadow-2xl rotate-6">
+            <div className="w-32 h-32 bg-gold-500 flex items-center justify-center shadow-2xl rotate-6">
               <div className="text-center -rotate-6">
                 <p className="font-display text-4xl font-bold text-maroon-900">20+</p>
                 <p className="text-sm text-maroon-800 font-medium">Years</p>
@@ -602,7 +602,7 @@ const AboutSection = () => {
                   whileHover={{ x: 5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
-                  <div className="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-400">
+                  <div className="w-10 h-10 bg-gold-500/10 flex items-center justify-center text-gold-400">
                     {value.icon}
                   </div>
                   <span className="font-medium">{value.text}</span>
@@ -613,7 +613,7 @@ const AboutSection = () => {
             <motion.div variants={fadeInUp}>
               <Link
                 to="/about"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-gold-500 text-maroon-950 font-semibold rounded hover:bg-gold-400 transition-all"
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-gold-500 text-maroon-950 font-semibold hover:bg-gold-400 transition-all"
               >
                 Learn More About Us
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -744,13 +744,13 @@ const ProcessSection = () => {
                 </div>
               )}
 
-              <div className="relative bg-white rounded-2xl p-8 border border-maroon-100 hover:border-gold-300 hover:shadow-xl transition-all duration-300 h-full">
+              <div className="relative bg-white p-8 border border-maroon-100 hover:border-gold-300 hover:shadow-xl transition-all duration-300 h-full">
                 {/* Number */}
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-display text-5xl font-bold text-maroon-100 group-hover:text-gold-200 transition-colors">
                     {step.number}
                   </span>
-                  <div className="w-12 h-12 rounded-xl bg-maroon-900 text-gold-400 flex items-center justify-center group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors">
+                  <div className="w-12 h-12 bg-maroon-900 text-gold-400 flex items-center justify-center group-hover:bg-gold-500 group-hover:text-maroon-900 transition-colors">
                     {step.icon}
                   </div>
                 </div>
@@ -832,7 +832,7 @@ const TestimonialsSection = () => {
               variants={fadeInUp}
               className="relative"
             >
-              <div className="bg-maroon-50 rounded-2xl p-8 h-full">
+              <div className="bg-maroon-50 p-8 h-full">
                 <Quote className="w-10 h-10 text-gold-500/50 mb-4" />
                 <p className="text-maroon-700 leading-relaxed mb-6 italic">
                   "{testimonial.quote}"
@@ -906,7 +906,7 @@ const CTASection = () => {
           variants={staggerContainer}
         >
           <motion.div variants={scaleIn} className="mb-8">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 rounded-full text-gold-400 text-sm font-medium">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 text-gold-400 text-sm font-medium">
               <Building2 className="w-4 h-4" />
               Start Your Journey Today
             </span>
@@ -931,14 +931,14 @@ const CTASection = () => {
           >
             <Link
               to="/contact"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold rounded hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40 hover:scale-[1.02]"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40 hover:scale-[1.02]"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href="tel:+263712407700"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded hover:bg-white/20 transition-all backdrop-blur-sm"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 transition-all backdrop-blur-sm"
             >
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               Call +263 712 407 700
@@ -953,7 +953,7 @@ const CTASection = () => {
             <p className="text-maroon-300 text-sm mb-6">Trusted by leading organizations across Zimbabwe</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
               {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="w-24 h-12 bg-white/10 rounded flex items-center justify-center">
+                <div key={i} className="w-24 h-12 bg-white/10 flex items-center justify-center">
                   <span className="text-white/50 text-xs">Client {i}</span>
                 </div>
               ))}

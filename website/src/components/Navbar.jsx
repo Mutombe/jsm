@@ -138,7 +138,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl shadow-maroon-900/10 border border-maroon-100 overflow-hidden"
+                        className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl shadow-maroon-900/10 border border-maroon-100 overflow-hidden"
                       >
                         <div className="py-2">
                           {link.submenu.map((sublink, idx) => (
@@ -162,7 +162,7 @@ const Navbar = () => {
             <div className="hidden lg:flex items-center gap-4">
               <Link
                 to="/contact"
-                className="px-6 py-3 bg-gradient-to-r from-maroon-800 to-maroon-900 text-white text-sm font-medium tracking-wide rounded hover:from-maroon-700 hover:to-maroon-800 transition-all shadow-lg shadow-maroon-900/20 hover:shadow-xl hover:shadow-maroon-900/30 hover:-translate-y-0.5"
+                className="px-6 py-3 bg-gradient-to-r from-maroon-800 to-maroon-900 text-white text-sm font-medium tracking-wide hover:from-maroon-700 hover:to-maroon-800 transition-all shadow-lg shadow-maroon-900/20 hover:shadow-xl hover:shadow-maroon-900/30 hover:-translate-y-0.5"
               >
                 Get a Consultation
               </Link>
@@ -171,7 +171,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-maroon-900 hover:bg-maroon-50 rounded-lg transition-colors"
+              className="lg:hidden p-2 text-maroon-900 hover:bg-maroon-50 transition-colors"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -199,7 +199,7 @@ const Navbar = () => {
                   >
                     <Link
                       to={link.path}
-                      className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                      className={`block px-4 py-3 text-base font-medium transition-colors ${
                         isActive(link.path)
                           ? 'bg-maroon-50 text-maroon-900 border-l-4 border-gold-500'
                           : 'text-maroon-700 hover:bg-maroon-50 hover:text-maroon-900'
@@ -227,7 +227,7 @@ const Navbar = () => {
                 <div className="pt-4 mt-4 border-t border-maroon-100">
                   <Link
                     to="/contact"
-                    className="block w-full px-6 py-4 bg-gradient-to-r from-maroon-800 to-maroon-900 text-white text-center font-medium rounded-lg shadow-lg"
+                    className="block w-full px-6 py-4 bg-gradient-to-r from-maroon-800 to-maroon-900 text-white text-center font-medium shadow-lg"
                   >
                     Get a Consultation
                   </Link>

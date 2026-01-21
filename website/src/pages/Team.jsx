@@ -56,10 +56,10 @@ const HeroSection = () => {
 
   return (
     <section ref={ref} className="relative min-h-[70vh] overflow-hidden">
-      {/* Left Side - White */}
+      {/* Left Side - White (desktop only) */}
       <div className="absolute inset-y-0 left-0 w-1/2 bg-white hidden lg:block" />
       
-      {/* Right Side - Maroon */}
+      {/* Right Side - Maroon (full width on mobile, half on desktop) */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-1/2 bg-maroon-950">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
@@ -71,30 +71,30 @@ const HeroSection = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 min-h-[70vh] items-center gap-12">
+        <div className="grid lg:grid-cols-2 min-h-[70vh] items-center gap-8 lg:gap-12">
           {/* Left Content */}
           <motion.div
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={staggerContainer}
-            className="py-20 lg:py-0"
+            className="py-16 sm:py-20 lg:py-0"
           >
             <motion.span 
               variants={fadeInUp}
-              className="inline-flex items-center gap-2 text-maroon-700 font-semibold text-sm tracking-wider uppercase mb-6"
+              className="inline-flex items-center gap-2 text-gold-400 lg:text-maroon-700 font-semibold text-sm tracking-wider uppercase mb-4 sm:mb-6"
             >
-              <span className="w-12 h-px bg-maroon-700" />
+              <span className="w-10 sm:w-12 h-px bg-gold-400 lg:bg-maroon-700" />
               Our Leadership
             </motion.span>
 
             <motion.h1 
               variants={fadeInUp}
-              className="font-display text-5xl md:text-6xl lg:text-7xl text-maroon-950 leading-[1.05] mb-6"
+              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white lg:text-maroon-950 leading-[1.1] sm:leading-[1.05] mb-4 sm:mb-6"
             >
               Meet the{' '}
-              <span className="relative">
+              <span className="relative inline-block">
                 Experts
-                <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
+                <svg className="absolute -bottom-1 sm:-bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
                   <path d="M2 10C50 4 150 4 198 10" stroke="#d4a537" strokeWidth="4" strokeLinecap="round"/>
                 </svg>
               </span>
@@ -104,23 +104,23 @@ const HeroSection = () => {
 
             <motion.p 
               variants={fadeInUp}
-              className="text-lg text-maroon-700 leading-relaxed max-w-lg mb-8"
+              className="text-base sm:text-lg text-maroon-200 lg:text-maroon-700 leading-relaxed max-w-lg mb-6 sm:mb-8"
             >
               Since 2001, our team of PricewaterhouseCoopers-trained chartered accountants 
               has been delivering exceptional financial and business advisory services across Zimbabwe.
             </motion.p>
 
-            <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 bg-maroon-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-maroon-800 transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 bg-gold-500 lg:bg-maroon-900 text-maroon-950 lg:text-white px-6 sm:px-8 py-3.5 sm:py-4  font-semibold hover:bg-gold-400 lg:hover:bg-maroon-800 transition-all duration-300 text-sm sm:text-base"
               >
                 Work With Us
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 border-2 border-maroon-900 text-maroon-900 px-8 py-4 rounded-xl font-semibold hover:bg-maroon-50 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 lg:border-maroon-900 text-white lg:text-maroon-900 px-6 sm:px-8 py-3.5 sm:py-4  font-semibold hover:bg-white/10 lg:hover:bg-maroon-50 transition-all duration-300 text-sm sm:text-base"
               >
                 Our Services
               </Link>
@@ -132,9 +132,9 @@ const HeroSection = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={staggerContainer}
-            className="py-20 lg:py-0 lg:pl-12"
+            className="pb-16 sm:pb-20 lg:py-0 lg:pl-12"
           >
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {[
                 { number: '23+', label: 'Years of Excellence', icon: Award },
                 { number: '500+', label: 'Clients Served', icon: Users },
@@ -144,11 +144,11 @@ const HeroSection = () => {
                 <motion.div
                   key={index}
                   variants={scaleIn}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center"
+                  className="bg-white/10 backdrop-blur-sm border border-white/20  sm: p-4 sm:p-6 text-center"
                 >
-                  <stat.icon className="w-8 h-8 text-gold-400 mx-auto mb-3" />
-                  <div className="text-4xl font-display font-bold text-white mb-1">{stat.number}</div>
-                  <div className="text-maroon-200 text-sm">{stat.label}</div>
+                  <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-gold-400 mx-auto mb-2 sm:mb-3" />
+                  <div className="text-2xl sm:text-4xl font-display font-bold text-white mb-1">{stat.number}</div>
+                  <div className="text-maroon-200 text-xs sm:text-sm">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -158,7 +158,6 @@ const HeroSection = () => {
     </section>
   )
 }
-
 
 
 
@@ -248,10 +247,10 @@ const LeadershipSection = () => {
               <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <div className="relative max-w-md mx-auto lg:mx-0">
                   {/* Background decoration */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${index % 2 === 0 ? 'from-maroon-900 to-maroon-700' : 'from-gold-500 to-gold-600'} rounded-2xl transform ${index % 2 === 0 ? 'rotate-3' : '-rotate-3'}`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${index % 2 === 0 ? 'from-maroon-900 to-maroon-700' : 'from-gold-500 to-gold-600'}  transform ${index % 2 === 0 ? 'rotate-3' : '-rotate-3'}`} />
                   
                   {/* Main Image */}
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <div className="relative  overflow-hidden shadow-2xl">
                     <img 
                       src={leader.image}
                       alt={leader.name}
@@ -271,7 +270,7 @@ const LeadershipSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.4 }}
-                    className={`absolute -bottom-8 ${index % 2 === 0 ? '-right-4 lg:-right-8' : '-left-4 lg:-left-8'} bg-white rounded-2xl shadow-xl p-6 max-w-xs border border-maroon-100`}
+                    className={`absolute -bottom-8 ${index % 2 === 0 ? '-right-4 lg:-right-8' : '-left-4 lg:-left-8'} bg-white  shadow-xl p-6 max-w-xs border border-maroon-100`}
                   >
                     <Quote className="w-8 h-8 text-gold-500 mb-2" />
                     <p className="text-maroon-800 text-sm italic leading-relaxed">
@@ -283,7 +282,7 @@ const LeadershipSection = () => {
 
               {/* Content Side */}
               <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className="inline-flex items-center gap-2 bg-gold-100 text-gold-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <div className="inline-flex items-center gap-2 bg-gold-100 text-gold-700 px-4 py-2 text-sm font-medium mb-4">
                   <Briefcase className="w-4 h-4" />
                   {leader.role}
                 </div>
@@ -317,7 +316,7 @@ const LeadershipSection = () => {
                   {leader.expertise.map((skill, i) => (
                     <span 
                       key={i}
-                      className="px-4 py-2 bg-maroon-100 text-maroon-800 rounded-full text-sm font-medium hover:bg-maroon-200 transition-colors"
+                      className="px-4 py-2 bg-maroon-100 text-maroon-800 text-sm font-medium hover:bg-maroon-200 transition-colors"
                     >
                       {skill}
                     </span>
@@ -404,7 +403,7 @@ const SupportStaffSection = () => {
               key={index}
               variants={fadeInUp}
               whileHover={{ y: -10 }}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
+              className="group relative bg-white  overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
             >
               {/* Background Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -420,7 +419,7 @@ const SupportStaffSection = () => {
                 <div className="flex items-start gap-6">
                   {/* Avatar */}
                   <div className="flex-shrink-0">
-                    <div className="w-20 h-20 rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                    <div className="w-20 h-20  overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
                       <img 
                         src={member.image}
                         alt={member.name}
@@ -540,9 +539,9 @@ const ValuesSection = () => {
               key={index}
               variants={scaleIn}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-gold-500/30 transition-all duration-300"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10  p-6 text-center hover:bg-white/10 hover:border-gold-500/30 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-gold-500/20 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:bg-gold-500/30 transition-colors">
+              <div className="w-12 h-12 bg-gold-500/20  mx-auto mb-4 flex items-center justify-center group-hover:bg-gold-500/30 transition-colors">
                 <span className="text-2xl font-display text-gold-400">{index + 1}</span>
               </div>
               <h3 className="text-white font-semibold mb-2">{item.value}</h3>
@@ -567,7 +566,7 @@ const CTASection = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={staggerContainer}
-          className="relative rounded-3xl overflow-hidden"
+          className="relative  overflow-hidden"
         >
           {/* Background Image */}
           <div className="absolute inset-0">
@@ -614,14 +613,14 @@ const CTASection = () => {
               >
                 <Link
                   to="/contact"
-                  className="group inline-flex items-center justify-center gap-2 bg-gold-500 text-maroon-950 px-8 py-4 rounded font-semibold hover:bg-gold-400 transition-all duration-300 shadow-lg shadow-gold-500/25"
+                  className="group inline-flex items-center justify-center gap-2 bg-gold-500 text-maroon-950 px-8 py-4 font-semibold hover:bg-gold-400 transition-all duration-300 shadow-lg shadow-gold-500/25"
                 >
                   Get in Touch
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/careers"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded font-semibold hover:bg-white/20 transition-all duration-300 backdrop-blur-sm"
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 font-semibold hover:bg-white/20 transition-all duration-300 backdrop-blur-sm"
                 >
                   Join Our Team
                 </Link>

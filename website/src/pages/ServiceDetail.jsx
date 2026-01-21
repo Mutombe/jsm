@@ -348,7 +348,7 @@ const ServiceDetail = () => {
                 <div>
                   <motion.div 
                     variants={fadeInUp}
-                    className="w-20 h-20 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center mb-6 border border-gold-500/30"
+                    className="w-20 h-20 bg-gold-500/20 text-gold-400 flex items-center justify-center mb-6 border border-gold-500/30"
                   >
                     {service.icon}
                   </motion.div>
@@ -387,7 +387,7 @@ const ServiceDetail = () => {
                       { icon: <Award className="w-5 h-5" />, label: '100%', sublabel: 'Commitment' }
                     ].map((stat, index) => (
                       <div key={index} className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-400">
+                        <div className="w-10 h-10 bg-gold-500/10 flex items-center justify-center text-gold-400">
                           {stat.icon}
                         </div>
                         <div>
@@ -403,14 +403,14 @@ const ServiceDetail = () => {
                   variants={fadeInUp}
                   className="hidden lg:block"
                 >
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8">
                     <h3 className="font-heading font-semibold text-white text-xl mb-6">Quick Contact</h3>
                     <div className="space-y-4 mb-8">
                       <a 
                         href="tel:+263712407700"
                         className="flex items-center gap-3 text-maroon-200 hover:text-gold-400 transition-colors group"
                       >
-                        <div className="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">
+                        <div className="w-10 h-10 bg-gold-500/10 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">
                           <Phone className="w-5 h-5 text-gold-500" />
                         </div>
                         +263 712 407 700
@@ -419,7 +419,7 @@ const ServiceDetail = () => {
                         href="mailto:office@jsmconsulting.co.zw"
                         className="flex items-center gap-3 text-maroon-200 hover:text-gold-400 transition-colors group"
                       >
-                        <div className="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">
+                        <div className="w-10 h-10 bg-gold-500/10 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">
                           <Mail className="w-5 h-5 text-gold-500" />
                         </div>
                         office@jsmconsulting.co.zw
@@ -427,7 +427,7 @@ const ServiceDetail = () => {
                     </div>
                     <Link
                       to="/contact"
-                      className="group block w-full px-6 py-4 bg-gold-500 text-maroon-900 font-semibold text-center rounded hover:bg-gold-400 transition-all"
+                      className="group block w-full px-6 py-4 bg-gold-500 text-maroon-900 font-semibold text-center hover:bg-gold-400 transition-all"
                     >
                       Request a Consultation
                       <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
@@ -484,9 +484,9 @@ const ServiceDetail = () => {
                     key={index}
                     variants={fadeInUp}
                     whileHover={{ y: -5 }}
-                    className="bg-maroon-50 rounded-2xl p-8 hover:shadow-xl transition-all border border-transparent hover:border-gold-200"
+                    className="bg-maroon-50 p-8 hover:shadow-xl transition-all border border-transparent hover:border-gold-200"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-maroon-900 text-gold-400 flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 bg-maroon-900 text-gold-400 flex items-center justify-center mb-4">
                       <span className="font-display text-xl font-bold">{index + 1}</span>
                     </div>
                     <h3 className="font-heading font-semibold text-xl text-maroon-900 mb-3">
@@ -556,7 +556,7 @@ const ServiceDetail = () => {
                         />
                       </div>
                     )}
-                    <div className="relative bg-maroon-900/50 backdrop-blur-sm border border-maroon-800 rounded-xl p-6 text-center hover:border-gold-500/30 transition-all">
+                    <div className="relative bg-maroon-900/50 backdrop-blur-sm border border-maroon-800 p-6 text-center hover:border-gold-500/30 transition-all">
                       <div className="w-16 h-16 rounded-full bg-gold-500 text-maroon-900 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-gold-500/25">
                         <span className="font-display text-2xl font-bold">{index + 1}</span>
                       </div>
@@ -593,7 +593,7 @@ const ServiceDetail = () => {
                   </p>
 
                   {/* Image */}
-                  <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <div className="relative overflow-hidden shadow-xl">
                     <img 
                       src={service.heroImage}
                       alt={service.title}
@@ -613,7 +613,7 @@ const ServiceDetail = () => {
                       <motion.div 
                         key={index}
                         whileHover={{ scale: 1.02 }}
-                        className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-maroon-100"
+                        className="flex items-center gap-3 p-4 bg-white shadow-sm hover:shadow-lg transition-all border border-maroon-100"
                       >
                         <div className="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center flex-shrink-0">
                           <CheckCircle2 className="w-4 h-4 text-maroon-900" />
@@ -674,14 +674,14 @@ const ServiceDetail = () => {
               >
                 <Link
                   to="/contact"
-                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold rounded hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/25"
+                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-maroon-950 font-semibold hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/25"
                 >
                   Contact Us
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded hover:bg-white/20 transition-all backdrop-blur-sm"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 transition-all backdrop-blur-sm"
                 >
                   View All Services
                 </Link>
