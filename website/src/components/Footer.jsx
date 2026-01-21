@@ -86,6 +86,7 @@ const Footer = ({ onPrivacyClick, onCookiesClick }) => {
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-maroon-700 to-maroon-900 flex items-center justify-center border border-gold-500/30">
                 <img 
                   src="/logo.png" 
+                  loading="eager"
                   alt="JSM Consulting Logo" 
                   className="w-8 h-8 object-contain"
                 />

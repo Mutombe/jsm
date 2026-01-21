@@ -86,6 +86,7 @@ const Navbar = () => {
                   <img 
                     src="/logo.png" 
                     alt="JSM Consulting Logo" 
+                    loading="eager"
                     className="w-10 h-10 object-contain"
                   />
                 </div>

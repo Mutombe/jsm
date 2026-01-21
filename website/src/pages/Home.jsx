@@ -139,6 +139,7 @@ const SwissHeroSection = () => {
             <img 
               src={bgImages[currentImage]}
               alt=""
+              loading="eager"
               className="w-full h-full object-cover"
             />
           </motion.div>
